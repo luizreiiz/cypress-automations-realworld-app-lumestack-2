@@ -1,0 +1,16 @@
+import userData from "../fixtures/users/userData";
+import LoginPage from "../pages/loginPage";
+
+const loginPage = new LoginPage();
+
+// Test Case: Attempt to log in with invalid credentials.
+describe("Attempt to log in with invalid credentials", () => {
+        it("Should display an error message when logging in with invalid credentials", () => {
+        loginPage.accessLoginPage(); 
+        loginPage.loginWithAnyUser(
+            userData.loginFailData.username,
+            userData.loginFailData.password
+        );
+        loginPage.checkCredentialsErrorAlert();
+    });
+});

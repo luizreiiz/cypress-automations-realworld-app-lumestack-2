@@ -1,0 +1,27 @@
+{
+  "loginSuccessData": {
+    "username": "Heath93",
+    "password": "s3cret"
+  },
+  "loginFailData": {
+    "username": "fail",
+    "password": "fail"
+  },
+  "signupSuccessData": {
+    "firstName": "Devon",
+    "lastName": "Mann",
+    "username": "devman",
+    "password": "s3cret"
+  },
+  "signupFailData": {
+    "firstName": "Devon",
+    "lastName": "Mann",
+    "username": "devman",
+    "password": "123"
+  },
+  "createBankAccountData": {
+    "bankName": "Bank of Cypress",
+    "routingNumber": "123456789",
+    "accountNumber": "9876543210"
+  }
+}
