@@ -12,7 +12,7 @@ class LoginPage {
     accessLoginPage() {
         cy.visit("/signin");
     }
-    loginWithAnyUser(username, password) {
+    loginWithSomeUser(username, password) {
         cy.get(this.selectorsList().usernameInput).type(username);
         cy.get(this.selectorsList().passwordInput).type(password);
         cy.get(this.selectorsList().loginButton).click();

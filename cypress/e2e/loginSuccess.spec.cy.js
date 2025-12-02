@@ -7,11 +7,11 @@ const mainPage = new MainPage();
 
 // Test Case: Successful login.
 describe("Successful login", () => {
-        it("Should log in with a valid user", () => {
+    it("Should log in with a valid user", () => {
         loginPage.accessLoginPage();
-        loginPage.loginWithAnyUser(
+        loginPage.loginWithSomeUser(
             userData.loginSuccessData.username,
-            userData.loginSuccessData.password
+            userData.loginPasswordData.password
         );
         mainPage.verifyMainPage();
     });

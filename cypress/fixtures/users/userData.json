@@ -1,27 +1,52 @@
 {
-  "loginSuccessData": {
-    "username": "Heath93",
-    "password": "s3cret"
-  },
-  "loginFailData": {
-    "username": "fail",
-    "password": "fail"
-  },
-  "signupSuccessData": {
-    "firstName": "Devon",
-    "lastName": "Mann",
-    "username": "devman",
-    "password": "s3cret"
-  },
-  "signupFailData": {
-    "firstName": "Devon",
-    "lastName": "Mann",
-    "username": "devman",
-    "password": "123"
-  },
-  "createBankAccountData": {
-    "bankName": "Bank of Cypress",
-    "routingNumber": "123456789",
-    "accountNumber": "9876543210"
-  }
+    "loginPasswordData": {
+        "password": "s3cret"
+    },
+    "loginSuccessData": {
+        "username": "Heath93"
+    },
+    "loginFailData": {
+        "username": "fail",
+        "password": "fail"
+    },
+    "signupSuccessData": {
+        "firstName": "Devon",
+        "lastName": "Mann",
+        "username": "devman",
+        "password": "s3cret"
+    },
+    "signupFailData": {
+        "firstName": "Devon",
+        "lastName": "Mann",
+        "username": "devman",
+        "password": "123"
+    },
+    "createBankAccountData": {
+        "bankName": "Bank of Cypress",
+        "routingNumber": "123456789",
+        "accountNumber": "9876543210"
+    },
+    "successfulTransactionData": {
+        "username": "Judah_Dietrich50"
+    },
+    "failTransactionData": {
+        "username": "Heath93"
+    },
+    "selectContact": {
+        "ted": "Ted",
+        "lia": "Lia"
+    },
+    "transactionAmount": {
+        "fifty": "50",
+        "fiveHundred": "500",
+        "fiveThousand": "5000",
+        "tenThousand": "10000",
+        "fifteenThousand": "15000",
+        "twentyThousand": "20000",
+        "twentyFiveThousand": "25000",
+        "thirtyThousand": "30000"
+    },
+    "transactionDescription": {
+        "paymentForTests": "Payment for tests"
+    }
 }

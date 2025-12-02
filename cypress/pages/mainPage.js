@@ -10,6 +10,7 @@ class MainPage {
             routingNumberInput: "[data-test='bankaccount-routingNumber-input']",
             accountNumberInput: "[data-test='bankaccount-accountNumber-input']",
             submitCreateBankAccountButton: "[data-test='bankaccount-submit']",
+            newTransactionButton: "[data-test='nav-top-new-transaction']", // '$New' button
             // buttonEveryone: "[data-test='nav-public-tab']",
         };
 
@@ -33,6 +34,9 @@ class MainPage {
         cy.get(this.selectorList().submitCreateBankAccountButton).click();
         cy.get(this.selectorList().userOnbording).should("be.visible");
         cy.get(this.selectorList().onbordingNextButton).click();
+    }
+    newTransaction() {
+        cy.get(this.selectorList().newTransactionButton).click();
     }
 }
 
