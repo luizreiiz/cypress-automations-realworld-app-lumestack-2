@@ -21,7 +21,7 @@ class TransactionPage {
     }
     selectUserToSendMoney = (contact) => {
         cy.get(this.selectorList().userSearchInput).type(contact);
-        cy.get(this.selectorList().userSelect).eq(0).click();
+        cy.get(this.selectorList().userSelect).contains(contact).click();
     };
     madeTransaction(amount, description) {
         cy.get(this.selectorList().amountInput).type(amount);
