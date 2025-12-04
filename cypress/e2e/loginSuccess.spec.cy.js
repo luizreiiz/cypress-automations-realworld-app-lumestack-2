@@ -9,10 +9,7 @@ const mainPage = new MainPage();
 describe("Successful login", () => {
     it("Should log in with a valid user", () => {
         loginPage.accessLoginPage();
-        loginPage.loginWithSomeUser(
-            userData.loginSuccessData.username,
-            userData.loginPasswordData.password
-        );
+        loginPage.loginWithSomeUser(userData.loginUsername.heath93, userData.loginPassword.success);
         mainPage.verifyMainPage();
     });
 });

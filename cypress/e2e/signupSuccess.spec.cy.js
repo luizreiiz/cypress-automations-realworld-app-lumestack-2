@@ -4,9 +4,9 @@ import LoginPage from "../pages/loginPage";
 import MainPage from "../pages/mainPage";
 import Chance from "chance";
 
+const signupPage = new SignupPage();
 const loginPage = new LoginPage();
 const mainPage = new MainPage();
-const signupPage = new SignupPage();
 const chance = new Chance();
 const firstName = chance.first();
 const lastName = chance.last();
@@ -17,28 +17,14 @@ const password = chance.integer({ min: 9999, max: 99999 });
 describe("Successful new user registration", () => {
     it("Should register a new user with valid information, try to log in with it, and create a bank account", () => {
         signupPage.accessSignupPage();
-        signupPage.signupSuccess(
-            // userData.signupSuccessData.firstName,
-            // userData.signupSuccessData.lastName,
-            // userData.signupSuccessData.username,
-            // userData.signupSuccessData.password
-            firstName,
-            lastName,
-            username,
-            password
-        );
-        loginPage.loginWithSomeUser(
-            // userData.signupSuccessData.username,
-            // userData.signupSuccessData.password
-            username,
-            password
-        );
+        signupPage.signupSuccess(firstName, lastName, username, password);
+        loginPage.loginWithSomeUser(username, password);
         mainPage.verifyMainPage();
         mainPage.getStarted();
         mainPage.createBankAccount(
-            userData.createBankAccountData.bankName,
-            userData.createBankAccountData.routingNumber,
-            userData.createBankAccountData.accountNumber
+            userData.createBankAccount.bankName,
+            userData.createBankAccount.routingNumber,
+            userData.createBankAccount.accountNumber
         );
     });
 });

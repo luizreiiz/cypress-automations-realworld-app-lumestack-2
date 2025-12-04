@@ -7,14 +7,11 @@ const loginPage = new LoginPage();
 const mainPage = new MainPage();
 const transactionPage = new TransactionPage();
 
-// Test Case: Send money with insufficient balance.
+// Test Case: Send money with sufficient balance.
 describe("Send money with sufficient balance", () => {
     it("Should successfully send money", () => {
         loginPage.accessLoginPage();
-        loginPage.loginWithSomeUser(
-            userData.successfulTransactionData.username,
-            userData.loginPasswordData.password
-        );
+        loginPage.loginWithSomeUser(userData.loginUsername.judah, userData.loginPassword.success);
         mainPage.verifyMainPage();
         mainPage.newTransaction();
         transactionPage.selectUserToSendMoney(userData.selectContact.ted);

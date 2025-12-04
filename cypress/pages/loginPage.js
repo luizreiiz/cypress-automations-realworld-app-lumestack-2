@@ -1,10 +1,10 @@
 class LoginPage {
     selectorsList() {
         const selectors = {
-            usernameInput: "[data-test='signin-username']",
-            passwordInput: "[data-test='signin-password']",
-            loginButton: "[data-test='signin-submit']",
-            invalidCredentialsErrorAlert: "[data-test='signin-error']",
+            usernameInput: "[data-test='signin-username']", // username input
+            passwordInput: "[data-test='signin-password']", // password input
+            loginButton: "[data-test='signin-submit']", // login button
+            invalidCredentialsErrorAlert: "[data-test='signin-error']", // invalid credentials error alert
         };
 
         return selectors;

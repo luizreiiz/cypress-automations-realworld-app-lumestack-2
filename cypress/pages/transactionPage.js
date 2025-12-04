@@ -1,8 +1,8 @@
 class TransactionPage {
     selectorList() {
         const selectors = {
-            indexPathname: "/transaction/new",
-            transactionCreateStepOne: ".TransactionCreateStepOne-paper",
+            indexPathname: "/transaction/new", // transaction page pathname
+            transactionCreateStepOne: ".TransactionCreateStepOne-paper", // transaction create layout
             userSearchInput: "[data-test='user-list-search-input']", // type a username
             userSelect: ".MuiListItemText-multiline", // select a user from list
             amountInput: "[data-test='transaction-create-amount-input']", // input amount
@@ -17,7 +17,6 @@ class TransactionPage {
     verifyTransactionPage() {
         cy.location("pathname").should("eq", this.selectorList().indexPathname);
         cy.get(this.selectorList().transactionCreateStepOne).should("be.visible");
-        // cy.get(this.selectorList().buttonEveryone).should("be.selected");
     }
     selectUserToSendMoney = (contact) => {
         cy.get(this.selectorList().userSearchInput).type(contact);

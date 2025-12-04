@@ -11,10 +11,7 @@ const transactionPage = new TransactionPage();
 describe("Send money with insufficient balance", () => {
     it("Should display an error message when sending money without sufficient balance", () => {
         loginPage.accessLoginPage();
-        loginPage.loginWithSomeUser(
-            userData.failTransactionData.username,
-            userData.loginPasswordData.password
-        );
+        loginPage.loginWithSomeUser(userData.loginUsername.heath93, userData.loginPassword.success);
         mainPage.verifyMainPage();
         mainPage.newTransaction();
         transactionPage.selectUserToSendMoney(userData.selectContact.lia);

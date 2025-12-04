@@ -1,17 +1,19 @@
 class MainPage {
     selectorList() {
         const selectors = {
-            indexPathname: "/",
-            mainLayout: "[data-test='main']",
-            userOnbording: "[data-test='user-onboarding-dialog-content']",
-            onbordingNextButton: "[data-test='user-onboarding-next']",
-            createBankAccountInput: "[role='dialog']",
-            bankNameInput: "[data-test='bankaccount-bankName-input']",
-            routingNumberInput: "[data-test='bankaccount-routingNumber-input']",
-            accountNumberInput: "[data-test='bankaccount-accountNumber-input']",
-            submitCreateBankAccountButton: "[data-test='bankaccount-submit']",
+            indexPathname: "/", // main page pathname
+            mainLayout: "[data-test='main']", // main layout
+            userOnbording: "[data-test='user-onboarding-dialog-content']", // user onboarding dialog
+            onbordingNextButton: "[data-test='user-onboarding-next']", // onboarding next button
+            createBankAccountInput: "[role='dialog']", // create bank account dialog
+            bankNameInput: "[data-test='bankaccount-bankName-input']", // bank name input
+            routingNumberInput: "[data-test='bankaccount-routingNumber-input']", // routing number input
+            accountNumberInput: "[data-test='bankaccount-accountNumber-input']", // account number input
+            submitCreateBankAccountButton: "[data-test='bankaccount-submit']", // submit create bank account button
             newTransactionButton: "[data-test='nav-top-new-transaction']", // '$New' button
-            // buttonEveryone: "[data-test='nav-public-tab']",
+            buttonMineTransactions: "[data-test='nav-personal-tab']", // 'Mine' transactions tab
+            personalEmptyTransactionsList: "[data-test='empty-list-header']", // personal empty transactions list
+            personalTransactionsList: "[data-test='transaction-list']", // personal transactions list
         };
 
         return selectors;
@@ -37,6 +39,19 @@ class MainPage {
     }
     newTransaction() {
         cy.get(this.selectorList().newTransactionButton).click();
+    }
+    goToMineTransactions() {
+        cy.get(this.selectorList().buttonMineTransactions).click();
+    }
+    verifyEmptyTransactionHistory() {
+        // cy.get(this.selectorList().personalTransactionsList).contains("No transactions found");
+        cy.get(this.selectorList().personalEmptyTransactionsList).should(
+            "contain.text",
+            "No Transactions"
+        );
+    }
+    verifyLoadedTransactionHistory() {
+        cy.get(this.selectorList().personalTransactionsList).should("be.visible");
     }
 }
 

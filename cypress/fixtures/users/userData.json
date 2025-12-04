@@ -1,40 +1,23 @@
 {
-    "loginPasswordData": {
-        "password": "s3cret"
+    "loginUsername": {
+        "heath93": "Heath93",
+        "judah": "Judah_Dietrich50",
+        "devon": "devman",
+        "fail": "fail"
     },
-    "loginSuccessData": {
-        "username": "Heath93"
+    "loginPassword": {
+        "success": "s3cret",
+        "fail": "fail"
     },
-    "loginFailData": {
-        "username": "fail",
-        "password": "fail"
-    },
-    "signupSuccessData": {
-        "firstName": "Devon",
-        "lastName": "Mann",
-        "username": "devman",
-        "password": "s3cret"
-    },
-    "signupFailData": {
-        "firstName": "Devon",
-        "lastName": "Mann",
-        "username": "devman",
-        "password": "123"
-    },
-    "createBankAccountData": {
+    "createBankAccount": {
         "bankName": "Bank of Cypress",
         "routingNumber": "123456789",
         "accountNumber": "9876543210"
     },
-    "successfulTransactionData": {
-        "username": "Judah_Dietrich50"
-    },
-    "failTransactionData": {
-        "username": "Heath93"
-    },
     "selectContact": {
         "ted": "Ted",
-        "lia": "Lia"
+        "lia": "Lia",
+        "devon": "Devon"
     },
     "transactionAmount": {
         "fifty": "50",

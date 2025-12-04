@@ -1,13 +1,13 @@
 class SignupPage {
     selectorsList() {
         const selectors = {
-            firstNameInput: "[data-test='signup-first-name']",
-            lastNameInput: "[data-test='signup-last-name']",
-            userNameInput: "[data-test='signup-username']",
-            passwordInput: "[data-test='signup-password']",
-            confirmPasswordInput: "[data-test='signup-confirmPassword']",
-            signupButton: "[data-test='signup-submit']",
-            loginPathname: "/signin",
+            firstNameInput: "[data-test='signup-first-name']", // first name input
+            lastNameInput: "[data-test='signup-last-name']", // last name input
+            userNameInput: "[data-test='signup-username']", // username input
+            passwordInput: "[data-test='signup-password']", // password input
+            confirmPasswordInput: "[data-test='signup-confirmPassword']", // confirm password input
+            signupButton: "[data-test='signup-submit']", // signup button
+            loginPathname: "/signin", // login page pathname
         };
 
         return selectors;

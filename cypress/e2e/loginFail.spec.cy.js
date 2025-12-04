@@ -7,10 +7,7 @@ const loginPage = new LoginPage();
 describe("Attempt to log in with invalid credentials", () => {
     it("Should display an error message when logging in with invalid credentials", () => {
         loginPage.accessLoginPage();
-        loginPage.loginWithSomeUser(
-            userData.loginFailData.username,
-            userData.loginFailData.password
-        );
+        loginPage.loginWithSomeUser(userData.loginUsername.fail, userData.loginPassword.fail);
         loginPage.checkCredentialsErrorAlert();
     });
 });
