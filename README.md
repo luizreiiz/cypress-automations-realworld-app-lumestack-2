@@ -127,8 +127,8 @@ This test suite covers the following key features of the Real World App:
 | Priority           | Very High                                                                                                                                                                                                              |
 | Type               | Functional                                                                                                                                                                                                             |
 
-| Test Report       |                      |     |
-| ----------------- | -------------------- | --- |
+| Test Report       |                      |
+| ----------------- | -------------------- |
 | Test Case Summary | Current Build Result |
 | TCs Numbers       | 10                   |
 | TCs Passed        | 9                    |
